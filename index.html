@@ -18,67 +18,131 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	<style>
+	<style>	
 	
-		.navbar-brand {
-			font-size: 1.8em;
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	
+		.navbar-brand img {
+			height: 100%;
+			margin-top: 8px;
+		}
+		
+		.navbar-brand, .navbar-nav li a {
+			line-height: 60px;
+			height: 60px;
+			padding-top: 0;
+		}
+		
+		.navbar-toggle {
+			margin-top: 15px;
 		}
 		
 		#topContainer {
-			background-image: url("images/yellowrose.jpg");
-			height: 400px;
+			background-image: url("images/banner.jpg");
+			height: 200px;
 			width: 100%;
-			background-size:cover;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-clip: padding-box;
+			margin-top: 60px;
+			margin-bottom: 0;
 		}
 		
-		#topRow {
+		.links {
+			float: right;
+		}
+		
+		@media screen and (max-width: 767px) {
+			.links {
+				float: left;
+			}
+		}
+		
+		#welcome {
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-clip: content-box;
+			background: 
+				/* top, transparent red */
+				linear-gradient(
+				rgba(0, 0, 0, 0.45), 
+				rgba(0, 0, 0, 0.45)
+				),
+				/* your image */
+				url("images/welcome.png");
+			height: 720px;
+			width: 100%;
+		}
+		
+		.text-box {
+			height: 350px;
+			width: 500px;
 			margin-top: 100px;
 			text-align: center;
+			font-size: 1.25em;
+			padding: 15px;
+			background-color: rgba(255, 255, 255, 0.75);
+			border-radius: 5px;
 		}
 		
-		#topRow h1 {
-			font-size: 300%;
+		.text-box p {
+			padding-top: 20px;
 		}
 		
-		.bold {
-			font-weight: bold;
+		@media screen and (max-width: 767px) {
+			#topContainer {
+				background-image: url("images/banner.jpg");
+				height: 200px;
+				width: 100%;
+				background-position: center;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				background-clip: padding-box;
+				margin-top: 60px;
+				margin-bottom: 0;
+			}
+			
+			#welcome {
+				background-position: center;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				background-clip: content-box;
+				background: 
+					/* top, transparent red */
+					linear-gradient(
+					rgba(0, 0, 0, 0.45), 
+					rgba(0, 0, 0, 0.45)
+					),
+					/* your image */
+					url("images/welcome.png");
+				height: 720px;
+				width: 100%;
+			}
+			
+			.text-box {
+				height: 275px;
+				width: 100%;
+				margin-top: 200px;
+				text-align: center;
+				font-size: 1.25em;
+				padding: 5px;
+				background-color: rgba(255, 255, 255, 0.75);
+				border-radius: 5px;
+			}
+		
+			.text-box p {
+				padding-top: 10px;
+			}
 		}
 		
-		.marginTop {
-			margin-top: 30px;
-		}
-		
-		.center {
-			text-align: center;
-		}
-		
-		.white {
-			color: white;
-		}
-		
-		.title {
-			margin-top: 100px;
-			font-size: 300%;
-		}
-		
-		#footer {
-			background-color: #B0D1FB;
-			width: 100%;
-			padding-top: 70px;
-		}
-		
-		.marginBottom {
-			margin-bottom: 30px;
-		}
-
-		.font {
-			text-shadow: 5px 2px 8px #000000;
-		}
 	</style>
   </head>
   <body>
   
-	<div class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -87,80 +151,28 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand">Area TO</a>
+				<a class="navbar-brand"><img src="images/white_logo.png"></a>
 			</div>
 			
-			<div class="collapse navbar-collapse">
+			<div class="collapse navbar-collapse links">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#download">Download The App</a></li>
+					<li><a href="#about">Roster</a></li>
+					<li><a href="#download">About Us</a></li>
 				</ul>
-				<form class="navbar-form navbar-right">
-					<button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">Log In</button>
-				</form>
 			</div>
 		</div> <!-- Closing tag for "container" div -->
 	</div> <!-- Closing tag for "navbar" div -->
 
-	<div class="container contentContainer" id="topContainer">
-	
+	<div class="jumbotron" id="topContainer"></div>
+		
+	<div class="container" id="welcome">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3" id="topRow">
-				<h1 class="font white bold marginTop">My Awesome App</h1>
-				<p class="lead white">This is why you should download this fantastic app!</p>
-				<p class="white">Some more information about the app. You can go into a little more detail if you want to.</p>
-				
-				<p class="lead white marginTop">Interested? Join our mailing list!</p>
-				
-				<form class="marginTop">
-					<div class="input-group">
-						<span class="input-group-addon">@</span>
-						<input type="email" class="form-control" placeholder="Your email" />
-					</div>
-					<input type="submit" class="btn btn-success btn-lg marginTop" />
-				</form>
-			</div>
-		</div>
-	
-	</div>
-	
-	
-	<div class="container contentContainer">
-		
-		<div class="row center">
-			<h1 class="center title">Why This App Is Awesome</h1>
-			<p class="lead center">Summary of the app's awesomeness</p>	
-		</div>
-		
-		<div class="row marginBottom">
-			<div class="col-md-4 marginTop">
-				<h2><span class="glyphicon glyphicon-ok"></span> Header</h2>
-				<p>A breif descriptions of one of the best features of your app. Maybe a little more text. A breif descriptions of one of the best features of your app. Maybe a little more text.</p>
-				<button class="btn btn-success marginTop" data-toggle="modal" data-target="#myModal">Log In</button>
-			</div>
-			<div class="col-md-4 marginTop">
-				<h2><span class="glyphicon glyphicon-time"></span> Header</h2>
-				<p>A breif descriptions of one of the best features of your app. Maybe a little more text. A breif descriptions of one of the best features of your app. Maybe a little more text.</p>
-				<button class="btn btn-success marginTop">Sign Up!</button>
-			</div>
-			<div class="col-md-4 marginTop">
-				<h2><span class="glyphicon glyphicon-signal"></span> Header</h2>
-				<p>A breif descriptions of one of the best features of your app. Maybe a little more text. A breif descriptions of one of the best features of your app. Maybe a little more text.</p>
-				<button class="btn btn-success marginTop">Sign Up!</button>
-			</div>
-		</div>
-		
-	</div>
-	
-	<div class="container contentContainer" id="footer">
-		<div class="row">
-			<h1 class="font center title"><span class="glyphicon glyphicon-download"></span> Download The App!</h1>
+			<div class="col-md-6 col-md-offset-4 text-box">
+				<h2>Welcome to our website!</h2>
+				<p>AreaTO is a group of content creators that started off in the tanki online community, we make various types of content. From Montages to let's plays, edits and more! In this website you can find information about our group. Members, our history and our goals. You can also check our social media, subscribe to our channel and join our discord server to connect with us.</p>
 			
-			<p class="lead center">Really, why should I download this app?</p>
-			
-			<p class="center"><img src="googleplay.png"></p>
-		
+			</div>
 		</div>
 	</div>
 	

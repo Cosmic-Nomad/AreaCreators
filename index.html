@@ -10,6 +10,11 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="jquery-1.12.2.min.js" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	
+	<link href="main.css" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700,900" rel="stylesheet">
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,127 +23,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	<style>	
-	
-		body {
-			margin: 0;
-			padding: 0;
-		}
-	
-		.navbar-brand img {
-			height: 100%;
-			margin-top: 8px;
-		}
-		
-		.navbar-brand, .navbar-nav li a {
-			line-height: 60px;
-			height: 60px;
-			padding-top: 0;
-		}
-		
-		.navbar-toggle {
-			margin-top: 15px;
-		}
-		
-		#topContainer {
-			background-image: url("images/banner.jpg");
-			height: 200px;
-			width: 100%;
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
-			background-clip: padding-box;
-			margin-top: 60px;
-			margin-bottom: 0;
-		}
-		
-		.links {
-			float: right;
-		}
-		
-		@media screen and (max-width: 767px) {
-			.links {
-				float: left;
-			}
-		}
-		
-		#welcome {
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
-			background-clip: content-box;
-			background: 
-				/* top, transparent red */
-				linear-gradient(
-				rgba(0, 0, 0, 0.45), 
-				rgba(0, 0, 0, 0.45)
-				),
-				/* your image */
-				url("images/welcome.png");
-			height: 720px;
-			width: 100%;
-		}
-		
-		.text-box {
-			height: 350px;
-			width: 500px;
-			margin-top: 100px;
-			text-align: center;
-			font-size: 1.25em;
-			padding: 15px;
-			background-color: rgba(255, 255, 255, 0.75);
-			border-radius: 5px;
-		}
-		
-		.text-box p {
-			padding-top: 20px;
-		}
-		
-		@media screen and (max-width: 767px) {
-			#topContainer {
-				background-image: url("images/banner.jpg");
-				height: 200px;
-				width: 100%;
-				background-position: center;
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-				background-clip: padding-box;
-				margin-top: 60px;
-				margin-bottom: 0;
-			}
-			
-			#welcome {
-				background-position: center;
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-				background-clip: content-box;
-				background: 
-					/* top, transparent red */
-					linear-gradient(
-					rgba(0, 0, 0, 0.45), 
-					rgba(0, 0, 0, 0.45)
-					),
-					/* your image */
-					url("images/welcome.png");
-				height: 720px;
-				width: 100%;
-			}
-			
-			.text-box {
-				height: 275px;
-				width: 100%;
-				margin-top: 200px;
-				text-align: center;
-				font-size: 1.25em;
-				padding: 5px;
-				background-color: rgba(255, 255, 255, 0.75);
-				border-radius: 5px;
-			}
-		
-			.text-box p {
-				padding-top: 10px;
-			}
-		}
-		
-	</style>
   </head>
   <body>
   
@@ -154,7 +38,7 @@
 				<a class="navbar-brand"><img src="images/white_logo.png"></a>
 			</div>
 			
-			<div class="collapse navbar-collapse links">
+			<div class="collapse navbar-collapse nav-links">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#home">Home</a></li>
 					<li><a href="#about">Roster</a></li>
@@ -168,46 +52,59 @@
 		
 	<div class="container" id="welcome">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-4 text-box">
+			<div class="col-md-1"></div>
+			<div class="col-md-4 col-sm-12 text-box">
 				<h2>Welcome to our website!</h2>
 				<p>AreaTO is a group of content creators that started off in the tanki online community, we make various types of content. From Montages to let's plays, edits and more! In this website you can find information about our group. Members, our history and our goals. You can also check our social media, subscribe to our channel and join our discord server to connect with us.</p>
-			
 			</div>
+			<div class="col-md-2"></div>
+			<div class="col-md-4 col-sm-12 text-box">
+				<a class="twitter-timeline" data-width="220" data-height="300" data-link-color="#2B7BB9" href="https://twitter.com/areatanki">Tweets by areatanki</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			<div class="col-md-1"></div>
 		</div>
+		
+		<!-- <div class="hidden-social container">
+			<div class="row">
+				<div class="col-md-5 col-sm-4"></div>
+				<div class="col-md-2 col-sm-4 social">
+					<ul class="links">
+						<li><a href="https://www.facebook.com/areatanki"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
+						<li><a href="https://twitter.com/areatanki"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCb79MLkLsNGx8y4UH7CXm_w/videos"><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a></li>
+						<li><a href="https://discord.gg/YzBgzr3"><img src="images/Discord+Words.png" alt="Join Our Discord Server!"></a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 col-sm-4"></div>
+			</div>
+		</div> -->
+		
 	</div>
 	
-	<div class="container">
-		
-		<div class="modal" id="myModal">
-		
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-				
-					<div class="modal-header">
-						<button class="close" data-dismiss="modal">X</button>
-						<h4 class="modal-title">Login</h4>
-					</div>
-				
-					<div class="modal-body">
-						
-						<div class="form-group">
-							<input type="email" placeholder="Email" class="form-control" />
+	<footer class="footer-inverse">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-xs-7">
+							<ul class="footer-text">
+								<li><p class="text-muted">Designed by <a href="http://github.com/WizardsofBoz">Jake Boz</a></p></li>
+							</ul>
 						</div>
-						<div class="form-group">
-							<input type="password" placeholder="Password" class="form-control" />
+						<div class="col-md-4"><br /></div>
+						<div class="col-md-4 col-sm-6 col-xs-5">
+							<ul class="social">
+								<li><a href="https://www.facebook.com/areatanki"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
+								<li><a href="https://twitter.com/areatanki"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+								<li><a href="https://www.youtube.com/channel/UCb79MLkLsNGx8y4UH7CXm_w/videos"><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a></li>
+								<li><a href="https://discord.gg/YzBgzr3"><img src="images/Discord+Words.png" alt="Join Our Discord Server!"></a></li>
+							</ul>
 						</div>
-						
-					<div class="modal-footer">
-						<button class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<button class="btn btn-success">Login</button>
 					</div>
-				
 				</div>
 			</div>
-		
 		</div>
-		
-	</div>
+	</footer>
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

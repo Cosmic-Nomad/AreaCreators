@@ -21,8 +21,8 @@
 	}
 	
 	#topContainer {
-		background-image: url("images/banner.jpg");
-		height: 200px;
+		background-image: url("images/banner2.jpg");
+		height: 442px;
 		width: 100%;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
@@ -32,17 +32,14 @@
 	}
 	
 	#welcome {
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		background-clip: content-box;
 		background: 
 			linear-gradient(
 			rgba(0, 0, 0, 0), 
 			rgba(0, 0, 0, 0)
 			);
 			/* url("images/welcome.png") */
-		height: 720px;
 		width: 100%;
+		margin-bottom: 150px;
 	}
 	
 	.nav-links {
@@ -50,8 +47,12 @@
 		float: right;
 	}
 	
+	.artist {
+		text-align: center;
+	}
+	
 	.text-box {
-		margin-top: 150px;
+		margin-top: 125px;
 		text-align: center;
 		font-size: 1.25em;
 		padding: 15px;
@@ -65,7 +66,7 @@
 	
 	@media screen and (max-width: 425px) {
 		#topContainer {
-			background-image: url("images/banner.jpg");
+			background-image: url("images/banner2.jpg");
 			height: 200px;
 			width: 100%;
 			background-position: center;
@@ -77,27 +78,21 @@
 		}
 		
 		#welcome {
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-clip: padding-box;
-			background: 
-				/* top, transparent red */
-				linear-gradient(
-				rgba(0, 0, 0, 0.45), 
-				rgba(0, 0, 0, 0.45)
+			background: linear-gradient(
+				rgba(0, 0, 0, 0), 
+				rgba(0, 0, 0, 0)
 				);
-			height: 720px;
+			/* url("images/welcome.png") */
 			width: 100%;
+			margin-bottom: 150px;
 		}
 		
 		.text-box {
-			height: 275px;
 			width: 100%;
 			margin-top: 200px;
 			text-align: center;
 			font-size: 1.25em;
-			padding: 5px;
+			padding: 5px 5px 50px 5px;
 			background-color: rgba(255, 255, 255, 0.75);
 			border-radius: 5px;
 		}
@@ -110,7 +105,7 @@
 	
 	@media screen and (max-width: 767px) {
 		#topContainer {
-			background-image: url("images/banner.jpg");
+			background-image: url("images/banner2.jpg");
 			height: 200px;
 			width: 100%;
 			background-position: center;

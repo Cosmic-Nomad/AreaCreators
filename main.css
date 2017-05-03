@@ -23,12 +23,11 @@
 	#topContainer {
 		background-image: url("images/banner2.jpg");
 		height: 442px;
-		width: 100%;
+		width: 100vw;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		background-clip: padding-box;
 		margin-top: 60px;
-		margin-bottom: 0;
 	}
 	
 	#welcome {
@@ -39,7 +38,31 @@
 			);
 			/* url("images/welcome.png") */
 		width: 100%;
-		margin-bottom: 150px;
+	}
+	
+	.artist p {
+		padding: 0;
+		text-align: center;
+	}
+
+	.left_box, .right_box {
+		height: 75vh;
+		width: 50%;
+		background-color: #aaaaaa;
+		text-align: center;
+	}
+	
+	.intro {
+		height: 25%;
+	}
+	
+	.video {
+		height: 75%;
+	}
+	
+	.twitter_timeline {
+		height: 100%;
+		width: 100%;
 	}
 	
 	.nav-links {
@@ -47,24 +70,18 @@
 		float: right;
 	}
 	
-	.artist {
-		text-align: center;
-	}
-	
-	.text-box {
-		margin-top: 125px;
-		text-align: center;
-		font-size: 1.25em;
-		padding: 15px;
-		background-color: rgba(0, 0, 0, 0.1);
-		border-radius: 5px;
-	}
-	
-	.text-box p {
-		padding-top: 20px;
+	@media screen and (min-width: 1445px) {
+		#topContainer {
+			height: 884px;
+		}
 	}
 	
 	@media screen and (max-width: 425px) {
+		.nav-links {
+			float: none;
+		}
+		
+		
 		#topContainer {
 			background-image: url("images/banner2.jpg");
 			height: 200px;
@@ -85,20 +102,6 @@
 			/* url("images/welcome.png") */
 			width: 100%;
 			margin-bottom: 150px;
-		}
-		
-		.text-box {
-			width: 100%;
-			margin-top: 200px;
-			text-align: center;
-			font-size: 1.25em;
-			padding: 5px 5px 50px 5px;
-			background-color: rgba(255, 255, 255, 0.75);
-			border-radius: 5px;
-		}
-	
-		.text-box p {
-			padding-top: 10px;
 		}
 		
 	}

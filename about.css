@@ -33,7 +33,7 @@
 	}
 	
 	.about_text {
-		width: 85%;
+		width: 90%;
 		margin: 15px auto;
 		padding: 25px;
 		box-sizing: border-box;
@@ -43,14 +43,14 @@
 	
 	.jumbotron {
 		height: 700px;
-		width: 85%;
+		width: 90%;
 	}
 	
 	#topContainer {
 		margin: 0 auto;
 		background-image: url("images/about.jpg");
 		background-position: center;
-		background-size: cover;
+		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		background-clip: padding-box;
 	}
@@ -63,14 +63,84 @@
 		
 	}
 	
+	@media screen and (max-width: 321px) {
+		
+	}
+	
+	@media screen and (max-width: 376px) {
+		
+	}
+	
+	@media screen and (max-width: 425px) {
+		
+		.social {
+			display: none;
+		}
+		
+		.footer-text {
+			display: none;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+
+		.social {
+			height: 15px;
+		}
+		
+		.social img {
+			height: 15px;
+		}
+		
+		.discord {
+			display: none;
+		}
+		
+		.discord_small {
+			display: block !important;
+		}
+		
+		.copyright_small {
+			display: block !important;
+		}
+		
+		.copyright {
+			display: none;
+		}
+		
+	}
+	
+	@media screen and (max-width: 1024px) {
+		
+	}
+	
+	@media screen and (min-width: 1441px) {
+		
+	}
+	
+	@media screen and (max-width: 1440px) {
+		/* empty */
+	}
+	
+	.social {
+		height: 25px;
+		padding: 0;
+		margin: 0;
+		
+	}
+	
+	.social li {
+		list-style: none;
+		float: left;
+		padding-top: 15px;
+	}
+	
 	footer {
-		height: 75px;
+		height: 100px;
 		padding: 10px 50px 0 50px;
 		margin: 0;
 		color: white;
 		background-color: #111111;
-		position: relative;
-		top: 80px;
 	}
 	
 	footer ul {
@@ -87,8 +157,23 @@
 		padding: 0 5px 0 5px;
 	}
 	
-	footer img {
+	footer .social img {
 		height: 20px;
+	}
+	
+	.discord_small {
+		display: none;
+	}
+	
+	.copyright {
+		font-size: 0.75em;
+		text-align: right;
+	}
+	
+	.copyright_small {
+		font-size: 0.75em;
+		text-align: right;
+		display: none;
 	}
 	
 	.fa-youtube-play {
@@ -103,6 +188,6 @@
 		color: #17A2F3;
 	}
 	
-	.footer-text li {
-		padding: 5px;
+	.footer-text {
+		margin: 0 0 0 -40px;
 	}

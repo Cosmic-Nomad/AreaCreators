@@ -63,16 +63,16 @@
 		font-family: 'Roboto', sans-serif;
 	}
 	
-	#elias {
+	#long_name {
 		padding-left: 5px;
 		font-size: 1.95em;
 	}
 	
-	#jake {
+	#other {
 		height: 230px;
 	}
 	
-	#jake i {
+	#other i {
 		padding-top: 5px;
 	}
 	
@@ -94,6 +94,7 @@
 	
 	.user i {
 		padding-right: 2.5px;
+		padding-top: 2.5px;
 	}
 	
 	@media screen and (max-width: 425px) {
